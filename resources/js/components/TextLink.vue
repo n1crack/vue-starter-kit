@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { Link } from '@inertiajs/vue3';
+import { Method } from '@inertiajs/core';
 
 interface Props {
     href: string;
     tabindex?: number;
-    method?: string;
+    method?: Method;
     as?: string;
 }
 

@@ -34,14 +34,16 @@
         "moduleResolution": "bundler" /* Specify how TypeScript looks up a file from a given module specifier. */,
         // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
         "paths": {
-            /* Specify a set of entries that re-map imports to additional lookup locations. */ "@/*": ["./resources/js/*"],
+            /* Specify a set of entries that re-map imports to additional lookup locations. */
+            "@/*": ["./resources/js/*"],
             "ziggy-js": ["./vendor/tightenco/ziggy"]
         },
         // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
         // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
         "types": [
             "vite/client",
-            "vue/tsx",
+            "node",
+            //"vue/tsx",
             "./resources/js/types"
         ] /* Specify type package names to be included without being referenced in a source file. */,
         // "allowUmdGlobalAccess": true,                     /* Allow accessing UMD globals from modules. */
@@ -96,7 +98,7 @@
         /* Type Checking */
         "strict": true /* Enable all strict type-checking options. */,
         // "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
-        // "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
+        "strictNullChecks": true,                            /* When type checking, take into account 'null' and 'undefined'. */
         // "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
         // "strictBindCallApply": true,                      /* Check that the arguments for 'bind', 'call', and 'apply' methods match the original function. */
         // "strictPropertyInitialization": true,             /* Check for class properties that are declared but not set in the constructor. */
@@ -122,7 +124,11 @@
     "include": [
         "resources/js/**/*.ts",
         "resources/js/**/*.d.ts",
-        "resources/js/**/*.tsx", 
+        "resources/js/**/*.tsx",
         "resources/js/**/*.vue"
+    ],
+    "exclude": [
+        "node_modules",
+        "public"
     ]
 }
